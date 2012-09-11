@@ -11,72 +11,16 @@
   <div class="container">
     <h1><a href="/">Postnummer.info</a></h1>
     <p>
-      Letar du efter en gata och har postnummret?
-      Behöver du kolla om en viss gata hör till ett postnummer?
-      Vill du veta vilka gator som tillhör ett postnummer?
-      Vill du veta vilken stad ett postnummer tillhör?<br />
-      Använd detta API för att kolla. Du anger ett postnummer och får tillbaka information om vilka gator och gatnummer och vilken stad som hör till postnummret.
+      På grund av att Posten AB skickat ett cease and desist brev till mig är tjänsten tyvärr nerstängd.
+      Anledningen anges som att jag skulle ha kopierat och spridit deras postnummerdatabas, vilket inte är sant. All information som gick få från API:et hämtades från postens publika hemsida. Information vem som helst kan se.
+      Vill ni använda data ur postens tjänst och använder Ruby kan ni använda gem:et som API:et använde för att hämta data. Ni hittar det på github, <a href="http://github.com/walle/postnummer">postnummer</a>. Ni får då ruby objekt som innehåller datan ni söker fram istället för JSON.
     </p>
-    <p>
-      Du gör ett REST-anrop mot API-adressen och får en JSON-array med ett objekt för varje gata tillbaka.
-      Vill du använda det från javascript? Inga problem, lägg på en callback= parameter och du får svaret som JSONP.
-    </p>
-    <p>Tjänsten hämtar data från posten.se och är ett inofficiellt API. Det bör fungera så länge posten.se inte ändrar något på sin sida.</p>
-    <h2>Exempel</h2>
-    <h3>Anrop med postnummer: 111 57</h3>
-    <p class="commandline"><code>$ curl http://api.postnummer.info/v1/zip_codes/11157</code></p>
-    <pre>
-      <code>
-  [
-    {
-      "name": "GRYTGJUTARGÅNGEN",
-      "first_number": "6",
-      "last_number": "6",
-      "zip_code": "111 57",
-      "city": "STOCKHOLM"
-    },
-    {
-      "name": "HÖTORGET",
-      "first_number": "1",
-      "last_number": "15",
-      "zip_code": "111 57",
-      "city": "STOCKHOLM"
-    },
-    ...
-  ]</code>
-    </pre>
-    <h3>JSONP-anrop med postnummer: 111 57</h3>
-    <p class="commandline"><code>$ curl http://api.postnummer.info/v1/zip_codes/11157?callback=parseStreets</code></p>
-    <pre>
-      <code>
-  parseStreets(
-    [
-      {
-        "name": "GRYTGJUTARGÅNGEN",
-        "first_number": "6",
-        "last_number": "6",
-        "zip_code": "111 57",
-        "city": "STOCKHOLM"
-      },
-      {
-        "name": "HÖTORGET",
-        "first_number": "1",
-        "last_number": "15",
-        "zip_code": "111 57",
-        "city": "STOCKHOLM"
-      },
-      ...
-    ])
-      </code>
-    </pre>
     <ul class="links">
       <li><a href="http://github.com/walle/postnummer">Ruby bibliotek</a></li>
       <li><a href="https://twitter.com/#!/fredrikwallgren">@fredrikwallgren</a></li>
       <li><a href="http://github.com/walle">walle</a></li>
     </ul>
   </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/application.min.js"></script>
   <a href="https://github.com/walle/postnummer_api"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
   <script type="text/javascript">
     var _gaq = _gaq || [];
